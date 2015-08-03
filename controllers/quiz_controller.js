@@ -12,10 +12,6 @@ exports.answer = function(req, res){
 		res.render('quizes/answer',{respuesta: 'Incorrecto'});
 	}
 
-	exports.author = function(req, res){
-		res.render('quizes/question', {pregunta: 'Author'});
-	};
-// exports.author = function(req, res){
-// res.render('author', {nombre: 'Roberto Lozano Sáez'});
-//
-// };
+ exports.author = function(req, res){
+ 	res.render('author', {nombre: 'Roberto Lozano Sáez'});
+};
