@@ -33,7 +33,8 @@ exports.Quiz = Quiz;//exportar definicion de la tabla quiz
 sequelize.sync().then(function(){//success ejecuta el manejador una vez creada la tabla y sync sincroniza la tabla
     Quiz.count().then(function(count){//quiz.count nos dice el numero de filas de la tabla
         if(count === 0){
-        Quiz.create({pregunta: 'Cuál es la capital de Italia', respuesta: 'Roma'}).then(function(){
+        Quiz.create({pregunta: 'Capital de Italia', respuesta: 'Roma'});
+        Quiz.create({pregunta: 'Capital de Portugal', respuesta: 'Lisboa'}).then(function(){
         console.log('Base de datos inicializada')});
         };
     });
